@@ -381,6 +381,31 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
         return sfoo;
     }
 
+    public void getGrafo(melOrto foo){
+
+
+
+
+        GraphViz gv = new GraphViz("gif");
+        //iniciamos el grafo
+        gv.addln(gv.start_graph());
+        //creamos una conexion de A a B
+        gv.addln(recorremelorto(foo));
+        //de A a C
+        // gv.addln("A -> P;");
+        // gv.addln("C->X;");
+        //finalización de grafo
+        gv.addln(gv.end_graph());
+        //implime el dotsource que tiene el objeto gv
+        System.out.println(gv.getDotSource());
+        //creamos un gif a partir de ello
+        File out = new File("/home/josue/NetBeansProjects/proyectoEDD/web/orto.gif");
+        //genera el grafo en el gif seleccionado
+        gv.writeGraphToFile(gv.getGraph(gv.getDotSource()), out);
+
+
+
+    }
 
 
 

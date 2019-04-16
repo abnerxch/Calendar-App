@@ -117,5 +117,19 @@ public class Melorto {
  * @return
  */
 
+public boolean isVacia(){ //verifica si la matriz esta vacia
+    if((this.inicio.lfs==null)&&(this.inicio.lcs==null))
+        return true;
+    else
+        return false;
+}
+    public void gotoStart(){
+        actual=inicio;
+
+    }
+
+
+
+
 
 }

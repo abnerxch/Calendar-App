@@ -95,5 +95,27 @@ public class Melorto {
         return s;
     }
 
+    public void setSiguiente(melOrto foo){
+        this.sig=foo;
+    }
+    public void setAnterior(melOrto foo){
+        this.ant=foo;
+    }
+
+    public melOrto getAnterior(){
+        return this.ant;
+    }
+
+    public melOrto getSiguiente(){
+        return this.sig;
+    }
+    public int getID(){
+        return this.id;
+    }
+/**
+ *
+ * @return
+ */
+
 
 }

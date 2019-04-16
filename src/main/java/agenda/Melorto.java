@@ -269,6 +269,29 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
     }
 
 
+    protected dia buskaColumnaAnterior(dia day){
+
+        int y=day.getFila();
+        int x=day.getCol();
+        actual=go2Dia(0,y);
+        while((actual.getLcs()!=null)&&(actual.getLcs().getCol()<x)){
+            actual=actual.getLcs();
+        }
+        System.out.println("valor de columna anterior "+actual.getCol());
+        return actual;
+    }
+
+    protected dia buskaFilaAnterior(dia day){
+
+        int x=day.getCol();
+        int y=day.getFila();
+        actual=go2Dia(x,0);
+        while((actual.getLfs()!=null)&&(actual.getLfs().getFila()<y)){
+            actual=actual.getLfs();
+        }
+        return actual;
+    }
+
 
 
 

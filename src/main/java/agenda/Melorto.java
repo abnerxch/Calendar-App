@@ -23,4 +23,10 @@ public class Melorto {
         this.ant=null;
     }
 
+    public void setID(int foo){
+        this.id=foo;
+        this.setNombre(foo);
+
+    }
+
 }

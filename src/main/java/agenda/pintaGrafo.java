@@ -1,6 +1,6 @@
 package agenda;
 
-public class printaGrafo {
+public class pintaGrafo {
 
     public pintaGrafo(){}
 

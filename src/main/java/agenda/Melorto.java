@@ -61,5 +61,39 @@ public class Melorto {
         }
     }
 
+    public String getNombre(){
+        String s;
+        int foo=this.getID();
+        switch(foo){
+            case 1: s=this.nombre;
+                break;
+            case 2: s= this.nombre;
+                break;
+            case 3: s= this.nombre;
+                break;
+            case 4:     s= this.nombre;
+                break;
+            case 5: s=this.nombre;
+                break;
+            case 6:     s= this.nombre;
+                break;
+            case 7: s= this.nombre;
+                break;
+            case 8: s= this.nombre;
+                break;
+            case 9: s=this.nombre;
+                break;
+            case 10: s= this.nombre;
+                break;
+            case 11: s= this.nombre;
+                break;
+            case 12: s= this.nombre;
+                break;
+            default: s= null;break;
+        }
+
+        return s;
+    }
+
 
 }

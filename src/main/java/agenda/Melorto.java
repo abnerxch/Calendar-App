@@ -128,6 +128,80 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
     }
 
+    public void insertarIndice(char axis,int index){
+        this.gotoStart();
+        boolean a=false;
+        dia tmp;
+        if(axis=='x'){
+
+            if((actual/*.getLcs()*/!=null)&&(a==false)){
+                while((actual.getLcs()!=null)&&(a==false)){
+                    if(actual.getLcs().getCol()>index){
+                        a=true;
+
+                    }
+                    actual=actual.getLcs();
+                }
+                if(a){
+                    dia indicex=new dia("",0,"",index,0);
+
+
+                    tmp=actual.getLcs();
+                    actual.setLcs(indicex);
+                    actual.getLcs().setLca(actual);
+                    actual.getLcs().setLcs(tmp);
+                    System.out.println("Inserto indice medio en posicion "+indicex.getCol()+"," +indicex.getFila());
+
+                }
+                else{
+                    dia indicex=new dia("",0,"",index,0);
+                    actual.setLcs(indicex);
+                    actual.getLcs().setLca(actual);
+                    System.out.println("Se inserto x al final");
+
+                }
+
+            }
+
+
+        }
+        if(axis=='y'){
+            if((actual/*.getLfs()*/!=null)&&(a==false)){
+                while((actual.getLfs()!=null)&&(a==false)){
+                    if(actual.getLfs().getFila()>index){
+                        a=true;
+
+                    }
+                    actual=actual.getLfs();
+                }
+                if(a){
+                    dia indicey=new dia("",0,"",0,index);
+
+
+                    tmp=actual.getLfs();
+                    actual.setLfs(indicey);
+                    actual.getLfs().setLfa(actual);
+                    actual.getLfs().setLfs(tmp);
+                    System.out.println("Inserto medio en posicion "+indicey.getCol()+"," +indicey.getFila());
+
+                }
+
+                else{
+                    dia indicey=new dia("",0,"",0,index);
+                    actual.setLfs(indicey);
+                    actual.getLfs().setLfa(actual);
+                    System.out.println("inserto el final y");
+
+                }
+
+            }
+
+        }
+
+
+
+    }//insertaIndice
+
 
 
 

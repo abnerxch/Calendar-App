@@ -367,6 +367,19 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
         }
     }
 
+    public String recorremelorto(melOrto foo){
+        String sfoo="";
+        dia head=foo.inicio;
+        dia tmpx=head;
+        dia tmpy=head;
+        while(tmpx!=null&&tmpy!=null){
+            sfoo=sfoo+""+tmpx.fecha+"->"+""+tmpx.lcs.fecha+"[ label = \"\" ];";
+            sfoo=sfoo+""+tmpy.fecha+"->"+""+tmpy.lfs.fecha+"[ label = \"\" ]; ";
+            tmpx=tmpx.getLcs();
+            tmpy=tmpy.getLfs();
+        }
+        return sfoo;
+    }
 
 
 

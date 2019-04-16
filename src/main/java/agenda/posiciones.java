@@ -108,5 +108,13 @@ public class posiciones {
         return foo;
     }
 
+    public int[] vpos(String sfoo){
+        int foo=Integer.parseInt(sfoo);
+        int v[]=new int[2];
+        v[0]=this.getX(foo);
+        v[1]=this.getY(foo);
+        return v;
+    }
+
 
 }

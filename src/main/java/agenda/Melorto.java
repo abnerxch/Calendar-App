@@ -202,6 +202,72 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
     }//insertaIndice
 
+    public void insertar(dia nuevo){
+
+        int x=nuevo.getCol();
+        int y=nuevo.getFila();
+        dia indicex,indicey,tmp=null;
+
+        if((x>0)&&(y>0)){
+            if(this.isVacia()){
+                this.insertarIndice('x', x);
+                this.insertarIndice('y',y);
+                indicex=go2Dia(x,0);
+                indicey=go2Dia(0,y);
+                indicex.setLfs(nuevo);
+                nuevo.setLfa(indicex);
+
+                indicey.setLcs(nuevo);
+                nuevo.setLca(indicey);
+
+
+                //ready^
+            }
+            else{
+                tmp=go2Dia(x,y);
+                if(tmp==null){
+                    indicex=go2Dia(x,0);
+                    indicey=go2Dia(0,y);
+                    if(indicex==null){
+                        System.out.println("nuevo indice medio "+x);
+                        insertarIndice('x',x);
+                        indicex=go2Dia(x,0);
+
+                    }
+                    if(indicey==null){
+                        System.out.println("nuevo indice medio y "+y);
+                        insertarIndice('y', y);
+                        indicey=go2Dia(0,y);
+
+                    }
+                    tmp=buskaColumnaAnterior(nuevo);
+                    System.out.println("("+tmp.getCol()+","+tmp.getFila()+")");
+                    nuevo.setLca(tmp);
+                    nuevo.setLcs(tmp.getLcs());
+                    tmp.setLcs(nuevo);
+                    if(nuevo.getLcs()!=null){
+                        nuevo.getLcs().setLca(nuevo);
+
+                    }
+                    tmp=buskaFilaAnterior(nuevo);
+                    nuevo.setLfa(tmp);
+                    nuevo.setLfs(tmp.getLfs());
+                    tmp.setLfs(nuevo);
+                    if(nuevo.getLfs()!=null){
+                        nuevo.getLfs().setLfa(nuevo);
+                    }
+                }
+
+
+
+
+            }
+
+        }
+
+
+    }
+
 
 
 

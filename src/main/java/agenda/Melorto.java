@@ -292,6 +292,84 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
         return actual;
     }
 
+    public dia go2Dia(int x, int y){
+        boolean e=false;
+        this.gotoStart();
+        System.out.println("1");
+        if(x>0){
+            System.out.println("2");
+            while((actual!=null)&&(e==false)){
+                System.out.println("while");
+                if(actual.getCol()==x){
+                    System.out.println("if X");
+                    while((actual!=null)&&(e==false)){
+                        if(actual.getFila()==y){
+                            e=true;
+                            System.out.println("encontro y");
+                        }//ify
+                        else
+                            actual=actual.getLfs();
+                    }
+                }//ifx
+                else{
+                    actual=actual.getLcs();
+                }
+            }
+        }
+        else {
+            System.out.println("3");
+            while((actual!=null)&&(e==false)){
+                if(actual.getFila()==y){
+                    while((actual!=null)&&(e==false)){
+                        if(actual.getCol()==x){
+                            e=true;
+                        }
+                        else
+                            actual=actual.getLcs();
+                    }
+                }
+                else
+                    actual=actual.getLfs();
+            }
+        }
+        if(e){
+            System.out.println("regresa bueno");
+            return actual;
+        }
+        else{
+            System.out.println("regresa Null");
+            return null;
+        }
+    }
+
+    public void imprime(char axis, int c){
+        if(axis=='x'){
+            dia head=go2Dia(c, 0);
+            if(head.getLfs()!=null){
+                while(head!=null){
+                    System.out.println(head.fecha);
+                    head=head.getLfs();
+                }
+            }
+            else
+                System.out.println("Fila vacia");
+        }
+        if(axis=='y'){
+            dia head=go2Dia(0,c);
+            if(head.getLcs()!=null){
+                while(head!=null){
+                    System.out.println(head.fecha);
+                    head=head.getLcs();
+                }
+            }
+            else
+                System.out.print("Columna Vacia");
+        }
+    }
+
+
+
+
 
 
 

@@ -2,7 +2,7 @@ package agenda;
 
 import java.io.File;
 
-public class Melorto {
+public class melOrto {
 
     int id;
     dia actual=null;

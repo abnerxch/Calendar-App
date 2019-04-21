@@ -45,7 +45,7 @@ public class listaApunte {
         return actual;
 
     }
-    public void delte(apunte foo){
+    public void delete(apunte foo){
 
     }
 

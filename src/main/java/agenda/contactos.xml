@@ -1,0 +1,22 @@
+<lista_contactos>
+    <contacto>
+        <nombre>Luis</nombre>
+        <apellido>Mendez</apellido>
+        <seudonimo>lucho</seudonimo>
+        <clasificacion>familia</clasificacion>
+        <telefono>12345678</telefono>
+        <celular>87654321</celular>
+        <direccion>3a calle 2-15 zona 5</direccion>
+        <email>luchomendez@hotmail.com</email>
+    </contacto>
+    <contacto>
+        <nombre>Peter</nombre>
+        <apellido>Parker</apellido>
+        <seudonimo>Spiderman</seudonimo>
+        <clasificacion>Amigo</clasificacion>
+        <telefono></telefono>
+        <celular>87654321</celular>
+        <direccion>New York</direccion>
+        <email>yonosoyspiderman@gmail.com</email>
+    </contacto>
+</lista_contactos>

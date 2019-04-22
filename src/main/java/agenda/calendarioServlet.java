@@ -22,7 +22,7 @@ import org.jdom.input.SAXBuilder;
 import org.jdom.*;
 import org.w3c.dom.Element;
 
-public class calendarioServlet { //extends HttpServlet{
+public class calendarioServlet extends HttpServlet{
 
     String eDescripcion;
     String eRekordatorio;

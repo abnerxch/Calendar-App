@@ -65,7 +65,7 @@ public class listaMelorto {
         }
         else{
             tmp=elAnterior(foo);
-            if(tmp=null){
+            if(tmp==null){
                 actual.setSiguiente(foo);
                 foo.setAnterior(actual);
             }

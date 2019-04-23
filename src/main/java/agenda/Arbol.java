@@ -10,15 +10,15 @@ public class Arbol {
     public PrintStream fiel;
 
     public Stack recorridos = new Stack();
-        //public string reccorridos
-        public contacto raiz;
+    //public string reccorridos
+    public contacto raiz;
     boolean comp;
 
-        public Arbol(){
-            this.raiz = null;
-            this.comp = false;
+    public Arbol(){
+        this.raiz = null;
+        this.comp = false;
 
-        }
+    }
     //Busqueda de contacto
     contacto auxBusqueda;
     public contacto Search(contacto raiz, String apodo){

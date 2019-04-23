@@ -1,0 +1,22 @@
+<lista_eventos>
+    <evento>
+        <dia>16</dia>
+        <mes>05</mes>
+        <año>2019</año>
+        <hora>3:00</hora>
+        <nombre>Fiesta</nombre>
+        <descripción>Invitación fiesta de disfrazes</descripción>
+        <prioridad>2</prioridad>
+        <recordatorio>si</recordatorio>
+    </evento>
+    <evento>
+        <dia>23</dia>
+        <mes>04</mes>
+        <año>2019</año>
+        <hora>1:00</hora>
+        <nombre>Proyecto</nombre>
+        <descripción>Entrega de Proyecto</descripción>
+        <prioridad>5</prioridad>
+        <recordatorio>si</recordatorio>
+    </evento>
+</lista_eventos>

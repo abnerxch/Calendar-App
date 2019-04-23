@@ -25,13 +25,13 @@ public class cargaEventosss {
                 System.out.println(dia.getText());
                 Element mes=e.getChild("mes");
                 System.out.println(mes.getText());
-                Element anio=e.getChild("anio");
+                Element anio=e.getChild("año");
                 System.out.println(anio.getText());
                 Element hora=e.getChild("hora");
                 System.out.println(hora.getText());
                 Element nombre=e.getChild("nombre");
                 System.out.println(nombre.getText());
-                Element descripcion=e.getChild("descripcion");
+                Element descripcion=e.getChild("descripción");
                 System.out.println(descripcion.getText());
                 Element prioridad=e.getChild("prioridad");
                 System.out.println(prioridad.getText());

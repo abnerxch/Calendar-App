@@ -1,4 +1,7 @@
 package agenda;
+/*
+Para los apuntes se ha utilizado una lista doblemente enlazada circular
+ */
 
 public class listaApunte {
     apunte inicio = null;

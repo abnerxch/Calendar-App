@@ -1,5 +1,9 @@
 package agenda;
 
+/*
+CSS que se utiliza para hacer la interfaz web en proceso
+ */
+
 public class miCSS {
     public miCSS(){}
 

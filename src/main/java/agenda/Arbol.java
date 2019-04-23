@@ -1,5 +1,11 @@
 package agenda;
+/*
+Se ha anadido este arbol AVL para almacenar los contactos
+Y para que se pueden desplegar los contactos de la siguiente manera:
+InOrder, PostOrden, PreOrden
 
+Los contactos, pueden desplegarse en un grafo
+ */
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;

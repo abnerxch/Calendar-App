@@ -1,5 +1,11 @@
 package agenda;
+/*
+El nodo dia esta contenido en una matriz ortogonal  o lista ortogonal
+cada nodo tiene 4 punteros a otros nodos
 
+Cada instancia de la matriz ortogonal conforma una lista doble enlazada
+
+ */
 public class listaMelorto {
     melOrto inicio=null;
     melOrto actual =null;

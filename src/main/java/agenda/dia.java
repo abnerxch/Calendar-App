@@ -1,4 +1,7 @@
 package agenda;
+/*
+La lista de eventos esta contenida en el nodo dia
+ */
 
 public class dia {
 

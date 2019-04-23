@@ -1,5 +1,11 @@
 package agenda;
 
+/*
+El nodo elemental es el nodo eventos.
+Este nodo esta contenido en una lista doble enlazada,
+ordenada por prioridad de eventos
+ */
+
 public class Evento {
     String hora;
     String nombre;

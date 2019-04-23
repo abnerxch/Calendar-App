@@ -1,10 +1,10 @@
 package agenda;
 
-import org.w3c.dom.Element;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 
-import javax.swing.text.Document;
 import java.util.List;
-import java.util.*;
 
 
 public class cargaContacto {
@@ -21,4 +21,5 @@ public class cargaContacto {
         }
         catch(Exception e){}
 
-    }}
+    }
+    }

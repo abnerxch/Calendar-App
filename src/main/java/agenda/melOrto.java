@@ -136,7 +136,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
             if((actual/*.getLcs()*/!=null)&&(a==false)){
                 while((actual.getLcs()!=null)&&(a==false)){
-                    if(actual.getLcs().getCol()>index){
+                    if(actual.getLcs().getColumna()>index){
                         a=true;
 
                     }
@@ -150,7 +150,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
                     actual.setLcs(indicex);
                     actual.getLcs().setLca(actual);
                     actual.getLcs().setLcs(tmp);
-                    System.out.println("Inserto indice medio en posicion "+indicex.getCol()+"," +indicex.getFila());
+                    System.out.println("Inserto indice medio en posicion "+indicex.getColumna()+"," +indicex.getFila());
 
                 }
                 else{
@@ -182,7 +182,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
                     actual.setLfs(indicey);
                     actual.getLfs().setLfa(actual);
                     actual.getLfs().setLfs(tmp);
-                    System.out.println("Inserto medio en posicion "+indicey.getCol()+"," +indicey.getFila());
+                    System.out.println("Inserto medio en posicion "+indicey.getColumna()+"," +indicey.getFila());
 
                 }
 
@@ -204,7 +204,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
     public void insertar(dia nuevo){
 
-        int x=nuevo.getCol();
+        int x=nuevo.getColumna();
         int y=nuevo.getFila();
         dia indicex,indicey,tmp=null;
 
@@ -241,7 +241,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
                     }
                     tmp=buskaColumnaAnterior(nuevo);
-                    System.out.println("("+tmp.getCol()+","+tmp.getFila()+")");
+                    System.out.println("("+tmp.getColumna()+","+tmp.getFila()+")");
                     nuevo.setLca(tmp);
                     nuevo.setLcs(tmp.getLcs());
                     tmp.setLcs(nuevo);
@@ -272,18 +272,18 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
     protected dia buskaColumnaAnterior(dia day){
 
         int y=day.getFila();
-        int x=day.getCol();
+        int x=day.getColumna();
         actual=go2Dia(0,y);
-        while((actual.getLcs()!=null)&&(actual.getLcs().getCol()<x)){
+        while((actual.getLcs()!=null)&&(actual.getLcs().getColumna()<x)){
             actual=actual.getLcs();
         }
-        System.out.println("valor de columna anterior "+actual.getCol());
+        System.out.println("valor de columna anterior "+actual.getColumna());
         return actual;
     }
 
     protected dia buskaFilaAnterior(dia day){
 
-        int x=day.getCol();
+        int x=day.getColumna();
         int y=day.getFila();
         actual=go2Dia(x,0);
         while((actual.getLfs()!=null)&&(actual.getLfs().getFila()<y)){
@@ -300,7 +300,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
             System.out.println("2");
             while((actual!=null)&&(e==false)){
                 System.out.println("while");
-                if(actual.getCol()==x){
+                if(actual.getColumna()==x){
                     System.out.println("if X");
                     while((actual!=null)&&(e==false)){
                         if(actual.getFila()==y){
@@ -321,7 +321,7 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
             while((actual!=null)&&(e==false)){
                 if(actual.getFila()==y){
                     while((actual!=null)&&(e==false)){
-                        if(actual.getCol()==x){
+                        if(actual.getColumna()==x){
                             e=true;
                         }
                         else

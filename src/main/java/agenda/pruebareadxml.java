@@ -14,7 +14,7 @@ public class pruebareadxml {
 
     public static void main (String[]args){
         SAXBuilder builder =new SAXBuilder();
-        File xmlFile = new File("C:\\Users\\yohan\\IdeaProjects\\Calendar-App2\\src\\main\\java\\agenda");
+        File xmlFile = new File("prueba.xml");
         try{
             Document document=(Document) builder.build(xmlFile);
             Element rootNode=document.getRootElement();

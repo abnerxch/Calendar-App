@@ -1,26 +1,23 @@
 package agenda;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.Document;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.jdom.input.SAXBuilder;
-import org.jdom.*;
-import org.w3c.dom.Element;
 
 public class calendarioServlet extends HttpServlet{
 
@@ -106,7 +103,7 @@ public class calendarioServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        boolean isMultipart=ServletFileUpload.isMultipartContent(request);
+        boolean isMultipart= ServletFileUpload.isMultipartContent(request);
         if(isMultipart){
             boolean ok=GuardarArchivo(request);
             if(ok)
@@ -1610,16 +1607,15 @@ public class calendarioServlet extends HttpServlet{
             boolean isMultipart = ServletFileUpload.isMultipartContent(request);
             System.out.println("Is multipart=" + isMultipart);
             DiskFileItemFactory factory = new DiskFileItemFactory();
-            // maxima talla que sera guardada en memoria, poner atencion en esto ya que
-            //el archivo de carga puede ser de considerable tamaño
+
             factory.setSizeThreshold(4096);
-            // si se excede de la anterior talla, se ira guardando temporalmente, en la sgte direccion
+
             factory.setRepository(new File("/tmp"));
             ServletFileUpload upload = new ServletFileUpload(factory);
-            //maxima talla permisible (si se excede salta al catch)
+            //(si se excede salta al catch)
             upload.setSizeMax(10000000);
             List fileItems = upload.parseRequest(request);
-            //obtiene el file enviado
+            //o
             Iterator i = fileItems.iterator();
             FileItem fi = (FileItem) i.next();
             // lo que hacemos es hacer una copia del archivo en el servidor

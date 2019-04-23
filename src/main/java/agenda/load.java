@@ -18,8 +18,8 @@ public class load {
 
         try{
             Document document=(Document) builder.build(path);
-            Element rootNode=document.getRootElement();
-            List contactos=rootNode.getChildren("contacto");
+            Element raiz=document.getRootElement();
+            List contactos=raiz.getChildren("contacto");
             Iterator i = contactos.iterator();
 
             while(i.hasNext()){

@@ -383,9 +383,6 @@ public boolean isVacia(){ //verifica si la matriz esta vacia
 
     public void getGrafo(melOrto foo){
 
-
-
-
         GraphViz gv = new GraphViz("gif");
         //iniciamos el grafo
         gv.addln(gv.start_graph());

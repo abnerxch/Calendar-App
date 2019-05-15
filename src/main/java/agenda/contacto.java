@@ -1,5 +1,5 @@
 package agenda;
-
+//Contactos almacenados en un arbol ALV
 public class contacto {
 
     public int indice;

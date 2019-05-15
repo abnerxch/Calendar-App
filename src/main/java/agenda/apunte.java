@@ -1,5 +1,6 @@
 package agenda;
 
+//Lista doble enlazada circular
 public class apunte {
     private apunte sig;
     private apunte ant;
